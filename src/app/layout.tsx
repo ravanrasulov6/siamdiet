@@ -28,9 +28,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="az" className="scroll-smooth">
-      <head>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-      </head>
       <body className="font-sans antialiased text-color-text-primary bg-color-background min-h-screen flex flex-col">
         <Providers>
           <Navbar />
