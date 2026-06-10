@@ -1,0 +1,22 @@
+# Siam Diet — Premium Wellness & Healthy Food Platform in Baku
+
+Siam Diet is a premium nutrition delivery, diet coaching, and wellness platform operating in Baku, Azerbaijan. The platform offers dietitian-approved meal plans, customized food building, and health calculators to guide users toward healthy living.
+
+## Contact & Conversions
+- **WhatsApp Contact**: +994501234567
+- **Primary Funnel**: Conversions happen via WhatsApp and Instagram DMs. Direct payments and checkouts are handled on WhatsApp through custom-tailored billing.
+- **Instagram Page**: instagram.com/siamdiet
+
+## Core Products & Packages
+- **SlimFit**: Weight Loss diet package (1200 - 1500 Kcal/day). Recommended for weight loss.
+- **DailyBalance**: Clean energy & balanced nutrition (1600 - 2000 Kcal/day). Recommended for maintaining health and energy.
+- **PowerGain**: Sports nutrition and muscle mass gain (2200 - 3000 Kcal/day, min 130g protein). Recommended for active individuals and athletes.
+
+## Interactive Tools
+- **Nutrition Calculator**: Free online tool to calculate BMI, maintenance calories, weight loss calories, and muscle gain calories based on height, weight, age, and activity level.
+- **Meal Builder (3D)**: Customized meal builder where users can select proteins (chicken, beef, salmon, tuna), carbs (rice, sweet potato, pasta), vegetables (broccoli, salad, mixed veggies), and drinks to configure their daily caloric and macro targets.
+
+## Professional Coaching Team
+- **Dr. Leyla Aliyeva**: Senior Dietitian (Clinical Dietetics, weight loss, ketogenic diets).
+- **Farid Mammadov**: Sports Nutrition Coach (Athletic performance, muscle gain, strength training).
+- **Dr. Aytan Gasimova**: Therapeutic Dietitian (Vegan & vegetarian nutrition, food allergies).

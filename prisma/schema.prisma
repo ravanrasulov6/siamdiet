@@ -1,0 +1,143 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+enum Role {
+  USER
+  ADMIN
+}
+
+model User {
+  id            String   @id @default(uuid())
+  email         String   @unique
+  name          String?
+  passwordHash  String
+  role          Role     @default(USER)
+  createdAt     DateTime @default(now())
+}
+
+model Lead {
+  id          String   @id @default(uuid())
+  name        String?
+  phone       String?
+  email       String?
+  source      String   // "calculator", "package", "meal-builder", "contact"
+  message     String?
+  details     Json?    // Hesablanmış kalori və ya yığılmış boşqab dataları
+  status      String   @default("NEW") // NEW, CONTACTED, CONVERTED, ARCHIVED
+  createdAt   DateTime @default(now())
+}
+
+model Coach {
+  id            String         @id @default(uuid())
+  name          String
+  title         String         // Məs: "Senior Nutritionist"
+  experience    String         // Məs: "6 il"
+  specialty     String         // Məs: "Keto & Weight Loss"
+  bio           String
+  avatar        String
+  certificates  String[]
+  rating        Float          @default(5.0)
+  whatsapp      String?        // Fərdi WhatsApp nömrəsi
+  categoryId    String
+  category      CoachCategory  @relation(fields: [categoryId], references: [id])
+  createdAt     DateTime       @default(now())
+}
+
+model CoachCategory {
+  id        String   @id @default(uuid())
+  name      String   // Keto, Sports, Therapeutic
+  coaches   Coach[]
+}
+
+model Meal {
+  id          String   @id @default(uuid())
+  name        String
+  description String
+  calories    Float
+  protein     Float
+  carbs       Float
+  fat         Float
+  price       Float
+  image       String
+  category    String   // Keto, Balanslı, HighProtein, Vegan
+  createdAt   DateTime @default(now())
+}
+
+model DietPackage {
+  id           String   @id @default(uuid())
+  name         String   // SlimFit, MuscleGain
+  description  String
+  priceWeekly  Float
+  priceMonthly Float
+  calories     Float
+  features     String[]
+}
+
+model CalculatorResult {
+  id             String   @id @default(uuid())
+  gender         String
+  height         Float
+  weight         Float
+  age            Int
+  activityLevel  String
+  bmi            Float
+  targetCalories Float
+  createdAt      DateTime @default(now())
+}
+
+model BlogPost {
+  id        String   @id @default(uuid())
+  title     String
+  content   String
+  image     String
+  author    String
+  createdAt DateTime @default(now())
+}
+
+model FAQ {
+  id        String   @id @default(uuid())
+  question  String
+  answer    String
+}
+
+model LandingPage {
+  id        String   @id @default(uuid())
+  slug      String   @unique
+  title     String
+  content   Json
+}
+
+model SEOPage {
+  id          String   @id @default(uuid())
+  path        String   @unique
+  metaTitle   String
+  metaDesc    String
+  keywords    String[]
+}
+
+model AnalyticsEvent {
+  id        String   @id @default(uuid())
+  eventType String   // "whatsapp_click", "calculator_complete", "coach_view"
+  details   Json?
+  createdAt DateTime @default(now())
+}
+
+model ContactRequest {
+  id        String   @id @default(uuid())
+  name      String
+  phone     String
+  message   String
+  createdAt DateTime @default(now())
+}
+
+model NewsletterSubscriber {
+  id        String   @id @default(uuid())
+  email     String   @unique
+  createdAt DateTime @default(now())
+}
