@@ -8,7 +8,6 @@ export default function SplashIntro() {
   const containerRef = useRef<HTMLDivElement>(null);
   const iconRef = useRef<HTMLDivElement>(null);
   const logoRef = useRef<HTMLHeadingElement>(null);
-  const subtextRef = useRef<HTMLParagraphElement>(null);
   const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
@@ -29,7 +28,6 @@ export default function SplashIntro() {
     // Reset components to initial hidden state
     gsap.set(iconRef.current, { opacity: 0, scale: 0.5, rotate: -45 });
     gsap.set(logoRef.current, { opacity: 0, y: 20 });
-    gsap.set(subtextRef.current, { opacity: 0, y: 10 });
 
     // Choreographed intro animation
     tl.to(iconRef.current, {
@@ -48,16 +46,6 @@ export default function SplashIntro() {
           ease: "power3.out",
         },
         "-=0.4"
-      )
-      .to(
-        subtextRef.current,
-        {
-          opacity: 1,
-          y: 0,
-          duration: 0.6,
-          ease: "power2.out",
-        },
-        "-=0.3"
       )
       // Gentle floating/pulse effect in place
       .to([iconRef.current, logoRef.current], {
@@ -99,16 +87,10 @@ export default function SplashIntro() {
         <div className="space-y-3">
           <h1
             ref={logoRef}
-            className="font-display font-extrabold text-5xl md:text-7xl tracking-[0.2em] bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent uppercase"
+            className="font-display font-extrabold text-4xl md:text-5xl tracking-[0.2em] bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent uppercase"
           >
             SIAM DIET
           </h1>
-          <p
-            ref={subtextRef}
-            className="font-sans text-text-secondary text-xs md:text-sm font-semibold tracking-[0.3em] uppercase"
-          >
-            Təbiətin gücü. Elmin dəqiqliyi.
-          </p>
         </div>
       </div>
     </div>
