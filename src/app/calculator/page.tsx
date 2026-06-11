@@ -117,8 +117,8 @@ export default function CalculatorPage() {
                   <label className="text-xs font-semibold text-color-text-primary">Boy (sm)</label>
                   <input
                     type="number"
-                    value={height}
-                    onChange={(e) => setHeight(Number(e.target.value))}
+                    value={height === 0 ? "" : height}
+                    onChange={(e) => setHeight(e.target.value === "" ? 0 : Number(e.target.value))}
                     min={100}
                     max={250}
                     required
@@ -129,8 +129,8 @@ export default function CalculatorPage() {
                   <label className="text-xs font-semibold text-color-text-primary">Çəki (kq)</label>
                   <input
                     type="number"
-                    value={weight}
-                    onChange={(e) => setWeight(Number(e.target.value))}
+                    value={weight === 0 ? "" : weight}
+                    onChange={(e) => setWeight(e.target.value === "" ? 0 : Number(e.target.value))}
                     min={30}
                     max={250}
                     required
@@ -141,8 +141,8 @@ export default function CalculatorPage() {
                   <label className="text-xs font-semibold text-color-text-primary">Yaş</label>
                   <input
                     type="number"
-                    value={age}
-                    onChange={(e) => setAge(Number(e.target.value))}
+                    value={age === 0 ? "" : age}
+                    onChange={(e) => setAge(e.target.value === "" ? 0 : Number(e.target.value))}
                     min={10}
                     max={100}
                     required
