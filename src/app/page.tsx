@@ -266,7 +266,8 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {packages.map((pkg) => {
               const price = billingCycle === "WEEKLY" ? pkg.weeklyPrice : pkg.monthlyPrice;
-              const orderMessage = getPackageOrderMessage(pkg.name);
+              const planLabel = billingCycle === "WEEKLY" ? "Həftəlik" : "Aylıq";
+              const orderMessage = getPackageOrderMessage(pkg.name, planLabel, price);
               const link = getWhatsAppLink(orderMessage);
 
               return (

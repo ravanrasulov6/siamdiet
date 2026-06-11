@@ -31,7 +31,7 @@ export default function Navbar() {
         // If packages section is in the viewport (near the top)
         if (rect.top <= 150 && rect.bottom >= 150) {
           setCurrentHash("#packages");
-        } else if (window.scrollY < 100) {
+        } else {
           setCurrentHash("");
         }
       }

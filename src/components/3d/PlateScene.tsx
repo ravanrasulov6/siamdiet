@@ -66,7 +66,7 @@ export default function PlateScene() {
           </div>
           <div className="text-left overflow-hidden">
             <div className="text-[9px] text-text-secondary uppercase tracking-wider font-bold">Protein</div>
-            <div className="text-xs font-bold text-text-primary truncate">{protein.name}</div>
+            <div className="text-xs font-bold text-text-primary truncate">{protein.nameAz}</div>
             <div className="text-[10px] text-primary font-medium">{protein.protein}g zülal</div>
           </div>
         </div>
@@ -78,7 +78,7 @@ export default function PlateScene() {
           </div>
           <div className="text-left overflow-hidden">
             <div className="text-[9px] text-text-secondary uppercase tracking-wider font-bold">Karbohidrat</div>
-            <div className="text-xs font-bold text-text-primary truncate">{carb.name}</div>
+            <div className="text-xs font-bold text-text-primary truncate">{carb.nameAz}</div>
             <div className="text-[10px] text-amber-700 font-medium">{carb.carbs}g karb</div>
           </div>
         </div>
@@ -90,7 +90,7 @@ export default function PlateScene() {
           </div>
           <div className="text-left overflow-hidden">
             <div className="text-[9px] text-text-secondary uppercase tracking-wider font-bold">Tərəvəz</div>
-            <div className="text-xs font-bold text-text-primary truncate">{vegetable.name}</div>
+            <div className="text-xs font-bold text-text-primary truncate">{vegetable.nameAz}</div>
             <div className="text-[10px] text-secondary-dark font-medium">{vegetable.calories} kkal</div>
           </div>
         </div>

@@ -51,6 +51,7 @@ export default function BuildMealPage() {
     protein.nameAz,
     carb.nameAz,
     vegetable.nameAz,
+    drink.nameAz,
     totals.calories
   );
   

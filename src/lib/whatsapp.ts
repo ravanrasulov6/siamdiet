@@ -11,10 +11,10 @@ export function getWhatsAppLink(text: string): string {
 /**
  * V3 pre-filled message for specific diet package
  */
-export function getPackageOrderMessage(packageName: string): string {
+export function getPackageOrderMessage(packageName: string, planType: string, price: number): string {
   return `Salam.
 
-Mən Siam Diet saytında "${packageName}" proqramına baxdım.
+Mən Siam Diet saytında "${packageName}" (${planType} plan, ${price} AZN) proqramına baxdım.
 
 Əlavə məlumat almaq istəyirəm.
 
@@ -47,6 +47,7 @@ export function getCustomMealOrderMessage(
   protein: string,
   carb: string,
   vegetable: string,
+  drink: string,
   calories: number
 ): string {
   return `Salam.
@@ -56,6 +57,7 @@ Siam Diet Meal Builder-də aşağıdakı menyunu qurdum.
 Protein: ${protein}
 Karbohidrat: ${carb}
 Tərəvəz: ${vegetable}
+İçki: ${drink}
 Kalori: ${calories} Kcal
 
 Bu menyu mənim üçün uyğundur?`;

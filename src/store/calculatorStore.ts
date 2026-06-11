@@ -57,6 +57,9 @@ export const useCalculatorStore = create<CalculatorState>((set, get) => ({
   calculate: () => {
     const { gender, height, weight, age, activityLevel, goal } = get();
 
+    // Guard against division by zero or invalid negative inputs
+    if (height <= 0 || weight <= 0 || age <= 0) return;
+
     // 1. Calculate BMI
     const heightInMeters = height / 100;
     const bmi = weight / (heightInMeters * heightInMeters);
